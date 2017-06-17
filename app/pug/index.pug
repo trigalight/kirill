@@ -1,7 +1,13 @@
 extends ./templates/_template.pug
 
 block variables
-  - var title = 'Главная страница'
+    - var title = 'Главная страница'
 
 block content
-  include ./blocks/_welcome.pug
+    h1 Главная страница
+
+    +button("Кнопка 1", "google.com")
+    +button("Кнопка 2", "rambler.ru")
+
+    include ./blocks/_test123.pug
+    include ./blocks/_a555.pug

@@ -88,9 +88,9 @@ gulp.task('pug', function() {
   WATCH
 ------------------------------------ */
 gulp.task('watch', function() {
-    gulp.watch('./app/less/**/*.less', ['less']);
-    gulp.watch('./app/pug/**/*.pug', ['pug']);
-    // gulp.watch('./app/scss/**/*.scss', ['scss']);
+    gulp.watch('app/less/**/*.less', ['less']);
+    gulp.watch('app/pug/**/*.pug', ['pug']);
+    // gulp.watch('app/scss/**/*.scss', ['scss']);
 });	
 
 
