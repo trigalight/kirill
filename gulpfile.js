@@ -75,7 +75,8 @@ gulp.task('scss', function () {
 gulp.task('pug', function() {
     return gulp.src('./app/pug/*.pug')
       .pipe(pug({
-    	// Your options in here. 
+        // Your options in here. 
+        pretty: true
       }))
       .pipe(gulp.dest('./app/'))
       .pipe(browserSync.stream());
@@ -124,11 +125,10 @@ gulp.task('clean-dist', function() {
 gulp.task('html-dist', function() {
     return gulp.src('./app/*.html')
       .pipe(usemin({
-      css1: [function() { return rev() }, function() { return minifyCss() } ],
-      css2: [function() { return rev() }, function() { return minifyCss() } ],
-      js1: [function() { return rev() }, function() { return uglify() } ],
-      js2: [function() { return rev() }, function() { return uglify() } ],
-      js3: [function() { return rev() }, function() { return uglify() } ]
+        vendorCss: [function() { return rev() }, function() { return minifyCss() } ],
+        userCss: [function() { return rev() }, function() { return minifyCss() } ],
+        vendorJs: [function() { return rev() }, function() { return uglify() } ],
+        userJs: [function() { return rev() }, function() { return uglify() } ]
       }))
     .pipe(htmlclean())
   .pipe(gulp.dest('./dist/'));
@@ -166,26 +166,31 @@ gulp.task('copy', function() {
 
 });
 
-// Задача gulp dist - которая будет запускать сборку проекта
-// Для публикации на сайте, без лишних библиотек
-// С сжатыми CSS JS HTML и оптимизированными изображениями
-gulp.task('default', function() {
-    runSequence(
-      ['less', 'pug'],
-      // ['scss', 'pug'],
-      ['server', 'watch']
-    )
+
+/* ------------------------------------
+  SERVER DIST
+------------------------------------ */
+gulp.task("server-dist", function () {
+  browserSync.init({
+    // notify: false,
+    // port: 1000,
+    server: { baseDir: './dist/' }
+  });
 });
+
 
 // Задач gulp dist - создает папку для загрузки на сервер
 // Сжатые html css js
 // Оптимизированные сжатые изображения
-gulp.task('dist', function() {
+gulp.task('dist',['less', 'pug'], function() {
     runSequence(
       'clean-dist',
-      ['html-dist', 'img-dist', 'copy']
+      ['html-dist', 'img-dist', 'copy'],
+      ['server-dist']
     )
 });
+
+
 
 // Задача dist-fast 
 // Бывает так что в процессе отладки сборки
@@ -193,9 +198,10 @@ gulp.task('dist', function() {
 // Самая долгая операция в сборке - это оптимизация изображений, особенно если их много.
 // Чтобы оптимизация изображений не занимала много времени
 // они убраны из этого таска
-gulp.task('dist-fast', function() {
+gulp.task('dist-fast',['less', 'pug'], function() {
   runSequence(
     'clean-dist',
-    [ 'html-dist', 'copy' ]
+    ['html-dist', 'copy'],
+    ['server-dist']
   )
 });
