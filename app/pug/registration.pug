@@ -1,0 +1,23 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Регистрация'
+
+block content
+	.login__header
+		.login-top
+		.block logo Супер Сайт
+
+		- var url = 'login.html';
+		a(href='/' + url) Вход
+
+
+	.login__form
+		.container
+		.row
+		.col-lg-4
+			.block Форма "Регистрация"
+			.block.button button Регистрация
+
+	include ./blocks/_login__footer.pug
+

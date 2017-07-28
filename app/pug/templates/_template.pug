@@ -1,4 +1,4 @@
-include ../blocks/_button.pug
+//- include ../blocks/_button.pug
 
 block variables
 
@@ -6,18 +6,25 @@ block variables
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		title #{title}
-		meta(content="" name="author")
-		meta(content="" name="description")
-		meta(content="" name="keywords")
+		title #{"WebCademy Kirill"}
+		meta(content="" name="trigalight")
+		meta(content="" name="Gulp сборка для ДЗ")
+		meta(content="" name="Ключевые слова...")
 		meta(content="width=device-width, initial-scale=1" name="viewport")
 		meta(content="ie=edge" http-equiv="x-ua-compatible")
 
 		//- favicon block start
+		<!-- FavIcons -->
+		link(rel='shortcut icon' href='img/favicons/favicon-48x48.ico'  type='image/x-icon')
+	
+		link(rel='apple-touch-icon' href='img/favicons/apple-touch-icon.png')
 		//- favicon block end
 		
 		<!-- build:vendorCss css/vendor.css -->
 		link(rel='stylesheet' href='/bower/bootstrap-grid/dist/bootstrap-grid.min.css')
+
+		link(rel='stylesheet' href='/bower/font-awesome/css/font-awesome.min.css')
+
 		<!-- endbuild -->
 
 		<!-- build:userCss css/user.css -->
@@ -29,9 +36,11 @@ html(lang="ru")
 		<![endif]-->
 
 	body
+		//- include ../blocks/_header.pug
+		
 		block content
 		
-		include ../blocks/_footer.pug
+		//- include ../blocks/_footer.pug
 
 
 		<!-- build:vendorJs js/vendor.js -->

@@ -1,0 +1,27 @@
+.block-header 
+	.logo Logo
+	.navigation Navigation
+
+	- var url = 'registration.html';
+	a(href='/' + url) Регистрация
+	|
+	- var url = 'login.html';
+	a(href='/' + url) Вход
+	
+		.line
+			// Навигация
+			- var url = 'index.html';
+			a(href='/' + url) Главная
+			
+			- var url = 'review.html';
+			a(href='/' + url) Обо мне
+
+
+			- var url = 'review.html';
+			a(href='/' + url) Работы
+
+			- var url = 'blog.html';
+			a(href='/' + url) Блог
+			
+			- var url = 'review.html';
+			a(href='/' + url) Контакты

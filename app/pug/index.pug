@@ -1,15 +1,15 @@
 extends ./templates/_template.pug
 
 block variables
-    - var title = 'Главная страница'
+	- var title = 'Главная страница'
 
 block content
-    h1 Главная страница
+			include ./blocks/_header.pug
+			include ./blocks/_main__main.pug
+			include ./blocks/_footer.pug
 
-    +button("Кнопка 1", "google.com")
-    +button("Кнопка 2", "rambler.ru")
+
+			
 
 
-    +blog-post-preview("Название поста 1", "img/blog/01-prev.jpg")
-    +blog-post-preview("Название поста 2", "img/blog/01-prev.jpg")
-    +blog-post-preview("Название поста 3", "img/blog/01-prev.jpg")
+

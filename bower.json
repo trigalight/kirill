@@ -1,0 +1,26 @@
+{
+  "name": "gulp-webinar-test",
+  "description": "public",
+  "main": "index.js",
+  "authors": [
+    "trigalight <view68@ya.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/trigalight/kirill",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-strings": "^1.1.0",
+    "normalize-css": "^7.0.0",
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap-grid": "^3.3.6-beta.1",
+    "open-sans-all": "^0.1.2"
+  }
+}
