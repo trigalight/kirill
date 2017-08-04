@@ -1,0 +1,30 @@
+extends ./templates/_template.pug
+
+block variables
+	- var title = 'Регистрация'
+	- var url = 'registration.html';
+
+block content
+	.login-page
+		.login-image
+
+			a#logo(href="/index.html")
+				span.logo_icon  
+				span.logo_text  Digital Lifestyle
+
+			.navigation_button
+					ul.main__enter--login
+						li
+							a(href='/' + url) Регистрация
+				
+
+			include ./blocks/_login__form.pug	
+		
+		
+			include ./blocks/_login__footer.pug		
+
+
+			
+
+	
+	

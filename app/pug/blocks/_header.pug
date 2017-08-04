@@ -1,27 +1,53 @@
 .block-header 
-	.logo Logo
-	.navigation Navigation
-
-	- var url = 'registration.html';
-	a(href='/' + url) Регистрация
-	|
-	- var url = 'login.html';
-	a(href='/' + url) Вход
+	p
+		//- a(href="/index.html")
+		span.logo_icon  
+				span.logo_text  Digital Lifestyle
 	
-		.line
-			// Навигация
-			- var url = 'index.html';
-			a(href='/' + url) Главная
+
+	.logo_slogan Сайт IT специалиста 
+	
+	//- навигация start 
+
+	//- Навигация
+	nav.navigation
+		ul.main_list
+			li.list
+				a#nvv(href='/index.html') Главная
+			li.list
+				a#nvv(href='#') Обо мне
+			li.list
+				a#nvv(href='/review.html') Работы
+			li.list
+				a#nvv(href='/blog.html') Блог
+			li.list
+				a#nvv(href='#') Контакты		  
 			
-			- var url = 'review.html';
-			a(href='/' + url) Обо мне
+	.navigation_button
+		ul.main__enter
+			li
+				- var url = 'registration.html';
+				a#nv(href='/' + url) Регистрация
+			li
+				- var url = 'login-page.html';
+				a#nv(href='/' + url) Вход
+	
 
 
-			- var url = 'review.html';
-			a(href='/' + url) Работы
+//- .textarea.form-control(wrap='soft').
+//- 		font-size:14px;
+//- 		margin:50px auto;
+//- 		display:block;
+//- 		border-radius:10px;
+//- 		border:6px solid #556677; 
 
-			- var url = 'blog.html';
-			a(href='/' + url) Блог
-			
-			- var url = 'review.html';
-			a(href='/' + url) Контакты
+//- .editable.form-control.
+//- 		font-size:14px;
+//- 		margin:50px auto;
+//- 		display:block;
+//- 		border-radius:10px;
+//- 		border:6px solid #556677; 
+
+
+// textarea#txtarea(wrap='off').
+	образец кода

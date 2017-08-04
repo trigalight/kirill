@@ -1,0 +1,68 @@
+//  Типографика
+
+// Заголовки
+
+.header-1  {
+font-size: 28px;
+font-family: "Open Sans";
+color: @black;
+line-height: 1.2;
+text-align: left;
+}
+
+.header-2:extend(.header-1) {
+font-size: 26px;
+}
+
+.header-3:extend(.header-1)  {
+font-size: 24px;
+ }
+
+.header-4:extend(.header-1)  {
+font-size: 20px;
+}
+
+.header-5:extend(.header-1)  {
+font-size: 18px;
+}
+
+.header-6:extend(.header-1)  {
+font-size: 16px;
+}
+
+
+
+// Текст - абзацы, ссылки в тексте
+
+.p {
+ margin-top: 0px;
+ margin-bottom: 100px;
+}
+
+.main__text {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: @black1;
+  line-height: 2;
+  text-align: left;
+  
+  }
+
+.button__link{
+  color: #037EC6;
+  text-decoration: underline;
+}
+
+.main__text--list {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: @black1;
+  line-height: 1.5;
+  text-align: left;
+  }
+
+.main__text--list-line {
+padding-bottom: 15px;
+list-style: none; /* Убираем исходные маркеры */
+background: url("/img/04-UI-KIT/blue-square.jpg") no-repeat 0 10px; /* Параметры фона */
+padding-left: 15px; /* Смещаем текст вправо */ }
