@@ -1,7 +1,7 @@
 extends ./templates/_template.pug
 
 block variables
-	- var title = 'Регистрация'
+	- var title = 'Вход'
 	- var url = 'registration.html';
 
 block content

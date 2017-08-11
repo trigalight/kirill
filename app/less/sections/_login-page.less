@@ -1,43 +1,36 @@
-body {
-	height: 100%;
-}
-
-.login-page {
-	// display: table; // записываем как таблицу
-	// width: 100%;
-	// display: inline-block;
-	// display: table-;
-}
-	
-
-.login-image {
-	display: table;
-	width:100%;
-	height:100%;
-	background-image: url("../img/__login--big.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;  /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */      
-	background-attachment: fixed;      /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */   
-	background-color: #00588B;
-
-	left: 0;
-	right: 0;
-	// заполнение фона картинкой
-	-webkit-background-size: cover;
-		-o-background-size: cover;
-			background-size: cover;
-	padding-top: 50px;
-	// padding-top: 145px; // навигация
-	padding-left: 50px;
-	padding-right: 50px;
-	position: relative;
-	
-}
+ .login-image {
+ 	width:100%;
+ 	height: 100vh; /* высота секции равна высоте области просмотра */
+ 	display: block;
+ 	background: @blue;
+	 
+	 background-image: -webkit-linear-gradient(rgba(90,163,207, 0.7), 10%, transparent 50%, rgba(90,163,207, 0.7) 90%),  url(../img/__login--big.jpg);
+	 background-image: -o-linear-gradient(rgba(90,163,207, 0.7), 10%, transparent 50%, rgba(90,163,207, 0.7) 90%),  url(../img/__login--big.jpg);
+	 background-image: linear-gradient(rgba(91,163,207, 0.7), 10%, transparent 50%, rgba(90,163,207, 0.7) 90%),  url(../img/__login--big.jpg);
+  
+ 	background-position: center center;  /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */      
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;       // Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения    
+ 	
+ 	margin: 0;
+ 	// заполнение фона картинкой
+ 	-webkit-background-size: cover;
+ 		-o-background-size: cover;
+ 		background-size: cover;
+ 
+ 	padding: 50px 50px 0 50px;
+ 	
+ 	position: relative;
+ 		
+ 	 display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+ }
 
 
 a#logo {
 	text-decoration: none;
-		
+			
 	&:hover,
 	&:focus,
 	&:active {
@@ -50,17 +43,18 @@ a#logo {
 
 // button registration
 ul.main__enter--login {
-	margin: 0;
+	display: block;
+	//margin: 50px 50px 0 0;
 	padding: 0;
 	list-style-type: none;}
 
 li {
 	display: inline-block;
-	margin-right: 30px;
 	padding: 0;
 	
 	a {
 	list-style: none;
+	text-decoration: underline !important;
 	//border-bottom: 2px dashed @white;
 	// padding-bottom: 3px;
 	color: @white;

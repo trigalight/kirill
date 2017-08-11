@@ -1,0 +1,53 @@
+h1 Кнопки
+
+
+
+block variables
+	- var arrow_left = '<span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>';
+
+
+
+h3 !{arrow_left} Назад 
+
+h3 Вперед !{arrow_left}
+
+br
+span
+	i.fa.fa-arrow-left(aria-hidden='true')
+		|
+
+	i.fa.fa-arrow-right(aria-hidden='true')
+
+//---------------------------------------------------------------------------------
+
+
+mixin btn(color_fon, color_txt, title, link)
+	.btn(class=`btn--${color_fon}`)&attributes(attributes)
+		a(class= color_txt href= link)  
+			= title
+
+// .btn_elmnts
+
++btn('blue', 'white', 'Сохранить', '#')
+br/
++btn('white', 'blue', 'Отмена', '#')
+
++btn('white', 'blue', 'Читать', '#')
+
++btn('white', 'blue', 'Назад', '#')
+
++btn('white', 'blue', 'Вперед', '#')
+br/
++btn('orange', 'white', 'Редактировать', '#')
+
++btn('orange', 'white', 'Добавить пост', '#')
+br/
++btn('red', 'white', 'Удалить', '#')
+br/
++btn('white-shdw', 'blue', 'Войти', '#')(class="btn--white-shdw--short")
+
++btn('white-shdw', 'blue', 'Регистрация', '#')
+
+
+//- (class=`btn--${type}`) (class=`btn--${clr-txt}`)
+

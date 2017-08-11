@@ -1,3 +1,9 @@
+mixin button(text, link)
+	a(href= link).button 
+		= text
+
+
+
 mixin blog-post-preview(title, img)
 	article.blog-post-preview
 		img(src= img).blog-post-preview__img

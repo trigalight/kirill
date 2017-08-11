@@ -1,4 +1,8 @@
-//- include ../blocks/_button.pug
+//- include ../blocks/_header.pug
+//- include ../elements/__typography.pug
+//- include ../elements/__buttons.pug
+//- include ../elements/__auxiliary-elements.pug
+
 
 block variables
 
@@ -23,8 +27,9 @@ html(lang="ru")
 		<!-- build:vendorCss css/vendor.css -->
 		link(rel='stylesheet' href='/bower/bootstrap-grid/dist/bootstrap-grid.min.css')
 
-		link(rel='stylesheet' href='/bower/font-awesome/css/font-awesome.min.css')
+		//- link(rel='stylesheet' href='/bower/font-awesome/css/font-awesome.min.css')
 
+		link(rel='stylesheet' href='/fonts/font-awesome/css/font-awesome.min.css')
 		<!-- endbuild -->
 
 		<!-- build:userCss css/user.css -->
@@ -40,12 +45,8 @@ html(lang="ru")
 
 
 	body
-		//- include ../blocks/_header.pug
-		
 		block content
-		
-		//- include ../blocks/_footer.pug
-
+	
 		
 
 

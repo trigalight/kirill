@@ -1,6 +1,7 @@
 var gulp = require("gulp"); 
 var runSequence = require('run-sequence');
 var browserSync = require("browser-sync").create();
+var plumber = require('gulp-plumber'); // .pipe(plumber()) // plumber
 
 
 // Styles
@@ -43,6 +44,7 @@ gulp.task("server", function () {
 gulp.task('less', function() {
     return gulp.src('./app/less/main.less')
       .pipe(sourcemaps.init())
+      .pipe(plumber()) // plumber
       .pipe(less())
       .pipe(autoprefixer({ browsers: ['last 4 versions'] }))
       .pipe(sourcemaps.write())
@@ -53,25 +55,11 @@ gulp.task('less', function() {
 
 
 /* ------------------------------------
-  SASS
------------------------------------- */
-/*gulp.task('scss', function () {
-  return gulp.src('./app/scss/main.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: ['last 4 versions'] }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./app/css/'))
-    .pipe(browserSync.stream());
-});
-*/
-
-
-/* ------------------------------------
   PUG
 ------------------------------------ */
 gulp.task('pug', function() {
     return gulp.src('./app/pug/*.pug')
+      .pipe(plumber()) // plumber
       .pipe(pug({
         // Your options in here. 
         pretty: true
@@ -106,6 +94,21 @@ gulp.task('default', function() {
 });
 
 
+
+
+/* ------------------------------------
+  SASS
+------------------------------------ */
+/*gulp.task('scss', function () {
+  return gulp.src('./app/scss/main.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({ browsers: ['last 4 versions'] }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./app/css/'))
+    .pipe(browserSync.stream());
+});
+*/
 
 
 

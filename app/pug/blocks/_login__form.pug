@@ -1,5 +1,36 @@
-.login__form--inner
-	.col-lg-4
-		.login__form--inner
-			.block Форма "Вход на сайт"
-			.button utton "Войти"
+figure.form
+	//-.login__form--inner 
+	//- form.form__card-login(method = "POST",action = "#") сука 
+	figcaption.h1.header-1 Вход на сайт
+
+	.error__header Неверный email или пароль
+	.error__body 
+		p Введите верные данные для входа или воспользуйтесь.
+			a.error__body(href="#") восстановлением пароля
+			|
+			|, чтобы войти на сайт.
+
+
+		
+	.form-group
+		input#email.form-control(type='email', placeholder='name@email.com' required)
+	.form-group
+		//-label(for='pw') Password:
+		input#pw.form-control(type='password' placeholder='password' required)
+
+			//- .form-group
+			//- 	label(for='pw2') Confirm Password:
+			//- 	input#pw2.form-control(type='password' name='confirmPassword')
+
+
+	input(type='checkbox' name='Запомнить меня' checked=true)
+	label.header-6(for='name') Запомнить меня  
+	
+	a.header-6(href="#") Забыл пароль
+
+	
+	// +btn('white-shdw', 'blue', 'Войти', '#')
+
+	//- // register form
+			form(method='POST' action='#')
+

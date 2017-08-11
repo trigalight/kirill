@@ -1,0 +1,118 @@
+
+
+///---------------------------------------------------------------------------------------------
+// вызов header
++headerSmall('showed', 'hidden') 
+
+
+mixin headerSmall(regClass, logClass)
+	header.header
+		.header__left
+			.logo
+				a(href="./index.html").logo__link
+					i.fa.fa-paper-plane-o.logo__icon
+					span.logo__title
+						| Супер Сайт
+		.header__right
+			.authenticate__links
+				a(href='register.html', class=regClass)
+					| Регистрация
+				a(href='login.html', class=logClass)
+					| Вход
+
+// вызов кнопок
++buttonArrowLeft('#')
++buttonArrowRight('#')
+
+mixin buttonArrowLeft(link)
+	a(href= link).button 
+		i(aria-hidden="true").fa.fa-arrow-left
+		| Назад
+
+mixin buttonArrowRight(link)
+	a(href= link).button
+		| Вперед
+		i(aria-hidden="true").fa.fa-arrow-right
+
+mixin button(buttonValue, link)
+	a(href=link).button
+		= buttonValue
+
+
+
+// вызов Card
++authenticateCard('Вход на сайт', 'E-mail', 'Пароль', 'Неверный email или пароль', 'Введите верные данные для входа!', 'Войти', '#')
+
++authenticateCard('Регистрация', 'E-mail', 'Пароль', 'Данный email уже занят', 'Используйте другой (!) email чтобы создать новый аккаунт.', 'Регистрация', '#')
+
+
+mixin authenticateCard(text, placeholder1, placeholder2, errorWarn, errorText, buttonValue, link)
+	.authenticate__card
+		.authenticate__name
+			h3
+				= text
+		form(id="authenticate-form").authenticate__form
+			+authenticateError(errorWarn, errorText)
+			input(type="text", name='email', placeholder=placeholder1).authenticate__input
+			input(type="text", name='password', placeholder=placeholder2).authenticate__input
+			include _checkbox.pug
+			+button(buttonValue, link)
+
+
+//---------------------------------------------------
+
+mixin authenticateError(errorWarn, errorText)
+	.authenticate__error
+		p
+			| Введите E-mail
+	.authenticate__error
+		p
+			| Введите пароль
+	.authenticate__error(id="authenticate__error")
+		p
+			= errorWarn
+		.authenticate__info
+			p
+				=errorText
+			p
+				| Или воспользуйтесь 
+				a(href='#')
+					| восстановлением пароля
+				|, чтобы войти на сайт.
+
+
+//-вызов карточки блога
++previewCard('img/blog/01-prev.jpg', 'Парк Йосемити', 'Читать', 'blog-single.html')
++previewCard('img/blog/01-prev.jpg', 'Парк Йосемити', 'Читать', 'blog-single.html')
+
+mixin previewCard(img, title, buttonValue, link)
+	.col-xs-12.col-sm-4
+		article.preview__card
+			img(src= img).preview__img
+			h4.preview__title
+				= title
+			+button(buttonValue, link)
+
+
+//- вызов комментариев
++review('background-image: url(usercontent/img/users/user-photo-01.jpg)', 'user-photo--small', 'Джон До', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательо отправлюсь туда этим летом.')
+
++review('background-image: url(usercontent/img/users/user-photo-02.jpg)', 'user-photo--small', 'Джоанна До', '05 Мая 2017 года в 15:45', 'Замечательный парк, обязательо отправлюсь туда этим летом.')
+
+mixin review(userPhotoLink, modificatorClass, userName, date, text)
+	<!-- Отдельный комментарий -->
+	.review
+		.hidden-xs.col-sm-1
+			+userPhoto(userPhotoLink, modificatorClass)
+		.col-sm-6
+			.section__content.section__content--comments
+				.blog-info.blog-info--fullWidth
+						ul
+							li.blog-info__element.blog-info__element--userName.color-grey
+								= userName
+							li.blog-info__element.blog-info__element--userDate.color-greyLight
+								i(aria-hidden="true").fa.fa-clock-o
+								= date
+				p
+					= text
+	<!-- //Отдельный комментарий -->

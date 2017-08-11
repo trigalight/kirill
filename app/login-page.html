@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Регистрация</title>
+    <title>Вход</title>
     <meta content="" name="trigalight"/>
     <meta content="" name="Gulp сборка для ДЗ"/>
     <meta content="" name="Ключевые слова..."/>
@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="img/favicons/favicon-48x48.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png"/><!-- build:vendorCss css/vendor.css -->
     <link rel="stylesheet" href="/bower/bootstrap-grid/dist/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="/bower/font-awesome/css/font-awesome.min.css"/><!-- endbuild -->
+    <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css"/><!-- endbuild -->
 <!-- build:userCss css/user.css -->
     <link rel="stylesheet" href="/css/main.css"/><!-- endbuild -->
 <!--[if lt IE 9]>
@@ -25,14 +25,24 @@
             <li><a href="/registration.html">Регистрация</a></li>
           </ul>
         </div>
-        <div class="login__form--inner">
-          <div class="col-lg-4">
-            <div class="login__form--inner">
-              <div class="block">Форма "Вход на сайт"</div>
-              <div class="button">utton "Войти"</div>
-            </div>
+        <figure class="form">
+          <figcaption class="h1 header-1">Вход на сайт</figcaption>
+          <div class="error__header">Неверный email или пароль</div>
+          <div class="error__body"> 
+            <p>Введите верные данные для входа или воспользуйтесь.<a class="error__body" href="#">восстановлением пароля</a>
+              , чтобы войти на сайт.
+            </p>
           </div>
-        </div>
+          <div class="form-group">
+            <input class="form-control" id="email" type="email" placeholder="name@email.com" required="required"/>
+          </div>
+          <div class="form-group">
+            <input class="form-control" id="pw" type="password" placeholder="password" required="required"/>
+          </div>
+          <input type="checkbox" name="Запомнить меня" checked="checked"/>
+          <label class="header-6" for="name">Запомнить меня  </label><a class="header-6" href="#">Забыл пароль</a>
+          <!-- +btn('white-shdw', 'blue', 'Войти', '#')-->
+        </figure>
         <div class="login__footer1">
           <p class="text">© Юрий Ключевский<br/>Создано с <span class="logo_icon--heart"></span>   в <span class="logo_text--footer">WebCademy.ru </span>     в 2017 году</p>
         </div>
