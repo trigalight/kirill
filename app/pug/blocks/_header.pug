@@ -1,38 +1,7 @@
 .block-header 
-	a#logo(href="/index.html")
-		span.logo_icon  
-		span.logo_text  Digital Lifestyle 
-	
-
-	.logo_slogan Сайт IT специалиста 
-	
-	//- навигация start 
-
-	//- Навигация
-	nav.navigation
-		ul.main_list
-			li.list
-				a#nvv(href='/index.html') Главная
-			li.list
-				a#nvv(href='#') Обо мне
-			li.list
-				a#nvv(href='/review.html') Работы
-			li.list
-				a#nvv(href='/blog.html') Блог
-			li.list
-				a#nvv(href='#') Контакты
-			li.list
-				a#nvv(href='/UI-KIT-%D0%91%D0%9B%D0%9E%D0%9A%D0%98.html') UI KIT - БЛОКИ		  
-			
-	.navigation_button
-		ul.main__enter
-			li
-				- var url = 'registration.html';
-				a#nv(href='/' + url) Регистрация
-			li
-				- var url = 'login-page.html';
-				a#nv(href='/' + url) Вход
-	
+	+logo_big
+	+navigation_main
+	+navigation_small
 
 
 //- .textarea.form-control(wrap='soft').

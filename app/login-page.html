@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+
+<!-- образец-->
+<!-- блог-->
+<!-- Обычные кнопки / use in __buttons.pug-->
+<!-- Обычные кнопки со стрелками -->
+<!-- Большое лого / header-->
+<!-- Большое навигацио  /header-->
+<!-- малое навигацио / header-->
+<!-- статусы ошибок--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
@@ -26,25 +34,24 @@
           </ul>
         </div>
         <figure class="form">
-          <figcaption class="h1 header-1">Вход на сайт</figcaption>
-          <div class="error__header">Неверный email или пароль</div>
-          <div class="error__body"> 
-            <p>Введите верные данные для входа или воспользуйтесь.<a class="error__body" href="#">восстановлением пароля</a>
-              , чтобы войти на сайт.
-            </p>
-          </div>
+          <figcaption class="h1 header-1">Вход на сайт</figcaption><br/>
+          <div class="block-error-1">Введите email</div><br/>
           <div class="form-group">
             <input class="form-control" id="email" type="email" placeholder="name@email.com" required="required"/>
-          </div>
+          </div><br/>
           <div class="form-group">
             <input class="form-control" id="pw" type="password" placeholder="password" required="required"/>
           </div>
-          <input type="checkbox" name="Запомнить меня" checked="checked"/>
-          <label class="header-6" for="name">Запомнить меня  </label><a class="header-6" href="#">Забыл пароль</a>
-          <!-- +btn('white-shdw', 'blue', 'Войти', '#')-->
+          <div class="check-remember-me">
+            <label for="check"> 
+              <input id="check" type="checkbox"/><span class="uncheck_pict">
+                <p class="remember-me">Запомнить меня<a class="forget" href="#">Забыл пароль</a></p></span>
+            </label>
+          </div>
+          <div class="btn btn--white-shdw"><a class="blue" href="#"> Войти</a></div>
         </figure>
         <div class="login__footer1">
-          <p class="text">© Юрий Ключевский<br/>Создано с <span class="logo_icon--heart"></span>   в <span class="logo_text--footer">WebCademy.ru </span>     в 2017 году</p>
+          <p class="text">© горлов кирилл<br/>Создано с <span class="logo_icon--heart"> + </span>   в <a class="logo_text--footer" href="http://webcademy.ru"><span class="logo_text--footer">WebCademy.ru</span></a>     в 2017 году</p>
         </div>
       </div>
     </div>

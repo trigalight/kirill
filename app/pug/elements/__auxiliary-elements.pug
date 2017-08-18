@@ -1,69 +1,32 @@
 // -Вспомогательные элементы
-br/
-p.zagolovok.
-	Вспомогательные элементы
 
-mixin bage ()
-	.bage Пользователь 
+.container
+	.row
+		.col-lg-12
+			.row
+				+check-remember-me()
+				
+				+bage()
 
-+bage()
+				+userphoto ()
 
+				+small_avatar()
 
-input(type='checkbox' name='Запомнить меня' checked=true)
-label.remember-me#136(for='name') Запомнить меня  
+			.row
+				+block-error-1()
+				br
+				br
+				+block-error-2()
+				
+			.row
+				br
+				.line
+				
+				+block-error-3()
 
-p.remember-me#136 Запомнить меня  
-
-//
-
-//- Фото пользователя  author_photo
-
-//- mixin userphoto ()			
-
-.user-photo.user-photo--shadow
-		img(src="/img/04-UI-KIT/photo-big.jpg" alt="user-photo")
-
-//- +userphoto ()				
-
-//- csmall avatar
-.user-photo.small-avatar
-	img(src="./img/04-UI-KIT/avatar_small.jpg" alt="")
+				+block-error-4()
 
 
-mixin block-error-1 ()
-	.block-error-1 Введите email
-
-.container.error
 	
-	+block-error-1 ()
-	+block-error-1 ()
-	br/
-	.block-error-2 Комментарий не может быть пустым.
-	br/
-	.block-error-3 
-		.block-error-1 Данный email уже занят
-		.block-error-3--gray
-			p.hint Используйте другой email чтобы создать новый аккаунт.
-			p.hint Или воспользуйтесь 
-				a(href="#") восстановлением пароля
-				.
-					, чтобы войти на сайт.
-	br/
 
-	.block-error-3 
-		.block-error-1 Неверный email или пароль
-		.block-error-3--gray2 
-			p.hint Введите верные данные для входа или воспользуйтесь 
-				a.hint(href="#") восстановлением пароля
-				.
-					, чтобы войти на сайт.
-
-
-br/ 
-br/
-br/
-
-br/
-br/
-br/
 

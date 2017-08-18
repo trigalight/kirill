@@ -1,9 +1,10 @@
+// образец
 mixin button(text, link)
 	a(href= link).button 
 		= text
+//---------------------------------------------------------------------------------
 
-
-
+// блог
 mixin blog-post-preview(title, img)
 	article.blog-post-preview
 		img(src= img).blog-post-preview__img
@@ -11,3 +12,146 @@ mixin blog-post-preview(title, img)
 			= title
 		a(href= link).blog-post-preview__link 
 			| Читать
+
+//---------------------------------------------------------------------------------
+
+// Обычные кнопки / use in __buttons.pug
+mixin btn(color_fon, color_txt, title, link)
+	.btn(class=`btn--${color_fon}`)&attributes(attributes)
+		a(class= color_txt href= link)  
+			= title
+
+
+// Обычные кнопки со стрелками 
+//- mixin btn_fa-arrow-left(link)
+//- 	a(href= link).button 
+//- 		i.fa.fa-arrow-left(aria-hidden='true')
+//- 		| Назад
+
+mixin btn_fa-arrow-left(color_fon, color_txt, title, link)
+	.btn(class=`btn--${color_fon}`)&attributes(attributes)
+		a(class= color_txt href= link)
+			i.fa.fa-arrow-left(aria-hidden='true')
+			= title
+
+mixin btn_fa-arrow-right(color_fon, color_txt, title, link)
+	.btn(class=`btn--${color_fon}`)&attributes(attributes)
+		a(class= color_txt href= link)
+			= title 
+			i.fa.fa-arrow-right(aria-hidden='true')
+
+
+//--------------------------------------------------------------------
+
+// Большое лого / header
+
+mixin logo_big()
+	a#logo(href="/index.html")
+		span.logo_icon  
+		span.logo_text  Digital Lifestyle 
+	.logo_slogan Сайт IT специалиста 
+
+// Большое навигацио  /header
+mixin navigation_main()
+	nav.navigation
+		ul.main_list
+			li.list
+				a#nvv(href='/index.html') Главная
+			li.list
+				a#nvv(href='#') Обо мне
+			li.list
+				a#nvv(href='/review.html') Работы
+			li.list
+				a#nvv(href='/blog.html') Блог
+			li.list
+				a#nvv(href='#') Контакты
+			li.list
+				a#nvv(href='/UI-KIT-%D0%91%D0%9B%D0%9E%D0%9A%D0%98.html') UI KIT - БЛОКИ	
+// малое навигацио / header
+mixin navigation_small()
+	.navigation_button
+		ul.main__enter
+			li
+				- var url = 'registration.html';
+				a#nv(href='/' + url) Регистрация
+			li
+				- var url = 'login-page.html';
+				a#nv(href='/' + url) Вход
+
+//-----------------------------------------------------------------------------------
+
+mixin bage ()
+	.bage Пользователь 	
+
+
+//---------------------------------------------------------------------------------
+
+//- Фото пользователя  author_photo
+
+mixin userphoto ()
+	.user-photo.user-photo--shadow
+		img(src="/img/04-UI-KIT/photo-big.jpg" alt="user-photo")
+
+
+//- csmall avatar
+mixin small_avatar()
+	.user-photo.small-avatar
+		img(src="./img/04-UI-KIT/avatar_small.jpg" alt="")
+
+//---------------------------------------------------------------------------------
+// статусы ошибок
+
+mixin block-error-1()
+	.block-error-1 Введите email
+
+mixin block-error-2()
+	.block-error-2 Комментарий не может быть пустым.
+
+mixin block-error-3()
+	.container.error
+		.block-error-3 
+			.block-error-1 Данный email уже занят
+			.block-error-3--gray
+				p.hint Используйте другой email чтобы создать новый аккаунт.
+				p.hint Или воспользуйтесь 
+					a(href="#") восстановлением пароля
+					.
+						, чтобы войти на сайт.
+mixin block-error-4()
+	.container.error
+		.block-error-3 
+			.block-error-1 Неверный email или пароль
+			.block-error-3--gray2 
+				p.hint Введите верные данные для входа или воспользуйтесь 
+					a.hint(href="#") восстановлением пароля
+					.
+						, чтобы войти на сайт.
+
+
+//-------------------------------------------------------------------------------------------------------
+
+mixin check-remember-me()
+	.check-remember-me
+		label(for='check') 
+			input(id='check' type='checkbox')
+			span.uncheck_pict
+				p.remember-me Запомнить меня
+					a.forget(href='#') Забыл пароль
+
+
+//----------------------------------------------------------------------------------------
+//- Footer for login page
+
+mixin footer_small()
+	.login__footer1
+		p.text © горлов кирилл<br/>Создано с 
+			span.logo_icon--heart  + 
+			|    в 
+			a.logo_text--footer(href='http://webcademy.ru')
+				span.logo_text--footer WebCademy.ru
+			|      в 2017 году
+
+//- <i class="fa fa-medkit" aria-hidden="true"></i>	
+
+
+

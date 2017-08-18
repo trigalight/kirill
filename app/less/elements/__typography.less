@@ -2,67 +2,87 @@
 
 // Заголовки
 
-.header-1  {
-font-size: 28px;
-font-family: "Open Sans";
-color: @black;
-line-height: 1.2;
-text-align: left;
+.elements-container {
+	// float: left;
+	display: flex;
+	//display: block;
+	 margin: 5px;
+	 padding: 5px;
+	 //height: auto;
 }
 
-.header-2:extend(.header-1) {
-font-size: 26px;
+.col-lg-9#a1 {
+	left: 0px;
+	 // width: 440px;
+	margin-bottom: 0px;
+	float: left;
 }
 
-.header-3:extend(.header-1)  {
-font-size: 24px;
- }
 
-.header-4:extend(.header-1)  {
-font-size: 20px;
+.header-1 {
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 1.2;
+	text-align: left;
+	color: @black;
 }
 
-.header-5:extend(.header-1)  {
-font-size: 18px;
+.header-2:extend(.header-1)
+{
+	font-size: 26px;
 }
 
-.header-6:extend(.header-1)  {
-font-size: 16px;
+.header-3:extend(.header-1)
+{
+	font-size: 24px;
+}
+
+.header-4:extend(.header-1)
+{
+	font-size: 20px;
+}
+
+.header-5:extend(.header-1)
+{
+	font-size: 18px;
+}
+
+.header-6:extend(.header-1)
+{
+	font-size: 16px;
 }
 
 
 
 // Текст - абзацы, ссылки в тексте
 
-.p {
- margin-top: 0px;
- margin-bottom: 100px;
+p.main__text {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	line-height: 2;
+
+	text-align: left;
+
+	color: @black1;
 }
 
-.main__text {
-  font-size: 16px;
-  font-family: "Open Sans";
-  color: @black1;
-  line-height: 2;
-  text-align: left;
-  
-  }
-
-.button__link{
-  color: #037EC6;
-  text-decoration: underline;
+.button__link {
+	text-decoration: underline;
+	color: #037ec6;
 }
 
 .main__text--list {
-  font-size: 16px;
-  font-family: "Open Sans";
-  color: @black1;
-  line-height: 1.5;
-  text-align: left;
-  }
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: left;
+	color: @black1;
+}
 
 .main__text--list-line {
-padding-bottom: 15px;
-list-style: none; /* Убираем исходные маркеры */
-background: url("/img/04-UI-KIT/blue-square.jpg") no-repeat 0 10px; /* Параметры фона */
-padding-left: 15px; /* Смещаем текст вправо */ }
+	padding-bottom: 15px;
+	padding-left: 15px; /* Смещаем текст вправо */ 
+	list-style: none; /* Убираем исходные маркеры */
+	background: url('/img/04-UI-KIT/blue-square.jpg') no-repeat 0 10px; /* Параметры фона */
+}

@@ -3,11 +3,22 @@ extends ./templates/_template.pug
 block variables
 	- var title = 'UI KIT - БЛОКИ'
 
+
+block content
 	include ./blocks/_header.pug
 
-	include ./elements/__typography.pug
-	
-	include ./elements/__buttons.pug
+	.block 01 - UI KIT — Кнопки
+	include ./elements/__buttons.pug	
 
+	.row
+
+	.block 03 - UI KIT — Типографика
+	include ./elements/__typography.pug
+
+	.line
+	.container
+			
+	.block 04 - UI KIT — Вспомогательные элементы
+	
 	include ./elements/__auxiliary-elements.pug
 

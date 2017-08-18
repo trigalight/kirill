@@ -1,7 +1,9 @@
 var gulp = require("gulp"); 
+// var puglint = require('gulp-pug-lint');
+// var pugLinter = require('gulp-pug-linter');
 var runSequence = require('run-sequence');
 var browserSync = require("browser-sync").create();
-var plumber = require('gulp-plumber'); // .pipe(plumber()) // plumber
+// var plumber = require('gulp-plumber'); // .pipe(plumber()) // plumber
 
 
 // Styles
@@ -44,7 +46,7 @@ gulp.task("server", function () {
 gulp.task('less', function() {
     return gulp.src('./app/less/main.less')
       .pipe(sourcemaps.init())
-      .pipe(plumber()) // plumber
+     // .pipe(plumber()) // plumber
       .pipe(less())
       .pipe(autoprefixer({ browsers: ['last 4 versions'] }))
       .pipe(sourcemaps.write())
@@ -59,7 +61,9 @@ gulp.task('less', function() {
 ------------------------------------ */
 gulp.task('pug', function() {
     return gulp.src('./app/pug/*.pug')
-      .pipe(plumber()) // plumber
+      // .pipe(puglint()) // Gulp plugin for pug-lint
+      // .pipe(pugLinter())
+      // .pipe(plumber()) // plumber
       .pipe(pug({
         // Your options in here. 
         pretty: true
@@ -67,6 +71,14 @@ gulp.task('pug', function() {
       .pipe(gulp.dest('./app/'))
       .pipe(browserSync.stream());
 });
+
+
+// gulp.task('lint:template', function () {
+//   return gulp
+//     .src('./**/*.pug')
+//     .pipe(pugLinter())
+//     .pipe(pugLinter.reporter())
+// })
 
 
 
