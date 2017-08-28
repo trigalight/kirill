@@ -1,0 +1,68 @@
+.container
+	.row
+		.col-lg-10
+			.col-lg-5
+				table.contact_table
+						thead
+							tr
+								th
+									.header-1 Контакты
+								th
+						tbody
+							tr
+								td.header-6(width= '170px') E-mail
+								td
+									a.button__link(href='#') enotaero@gmail.com
+							tr
+								td.header-6 Skype
+								td
+									a.button__link(href='#') enotaero
+							tr
+								td.header-6 Социальные сети
+								td.header-6(color= '@blue')
+									a.button__link(href='#') Профиль Вконтакте
+									br
+									a.button__link(href='#') Профиль Facebook
+									br
+									br
+							tr
+								td.header-6 Телефон
+								td +382 68 624 110
+							tr
+								td.header-6 Адрес
+								td Igalo, Herceg Novi, Montenegro, 85347
+
+			.col-lg-1
+
+			// .col-lg-1
+
+
+			.col-lg-5
+				.flex_d_c.flex_s_b#col2
+					.header-1 Связаться со мной
+					br
+
+					+input('text', 'name', 'Введите имя')
+
+					+input('text', 'name', 'Email')
+
+					+textarea('text', 'name', 'Сообщение')
+
+					.header-6 Прикрепить файл
+					p.main__text jpg, png, pdf, doc, весом до 2 Мб
+
+					.flex_d_r.flex_s_b.flex_v_c
+						+btn('white', 'blue', 'Выбрать файл', '#')
+						p.main__text(color= 'grey') my-lovely-photo.jpg
+
+					.flex_container
+						br
+						+btn('blue', 'white', 'Отправить', '#')
+
+
+
+
+
+iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.3580613548193!2d18.506923366481388!3d42.462672787913704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDI3JzQ1LjYiTiAxOMKwMzAnMzAuNSJF!5e0!3m2!1sru!2sru!4v1503751770485', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
+
+

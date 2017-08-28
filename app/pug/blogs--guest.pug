@@ -1,0 +1,53 @@
+extends ./templates/_template.pug
+
+
+block variables
+	- var title = 'Главная страница'
+
+block content
+
+	include ./blocks/_header.pug
+
+			//-__________________________________________________________________________
+
+	// Портфолио
+	.container
+		.h1.header-1
+			a.head(href='/blogs--guest.html') Блог веб-разработчика
+		.row
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_1.png', 'Поездка в New York ')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_2.png', 'Что я делал в долине')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_3.png', 'Как я ходил в поход этим летом')
+
+		.row
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_1.png', 'Поездка в New York ')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_2.png', 'Что я делал в долине')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_3.png', 'Как я ходил в поход этим летом')
+
+			.row
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_1.png', 'Поездка в New York ')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_2.png', 'Что я делал в долине')
+			.col-lg-4
+				+portfolio-card--post('/img/01_main/Post_Thumb_Preview_3.png', 'Как я ходил в поход этим летом')
+
+
+
+
+
+
+	.row_h80
+	footer
+		include ./blocks/_footer.pug
+
+
+
+
+

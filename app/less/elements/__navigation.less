@@ -1,106 +1,103 @@
 //- Навигация Главная Обо мне Работы
-nav.navigation
-{
-    font-family: 'Open Sans';
-    font-size: 18px;
-    font-weight: 700;
+nav.navigation {
+	font-family: 'Open Sans';
+	font-size: 18px;
+	font-weight: 700;
+	float: left;
+	margin-top: 25px;
+	margin-left: 42px;
 
-    margin-top: 25px;
-    margin-left: 42px;
+	text-align: left;
+	text-decoration: underline;
 
-    text-align: left;
-    text-decoration: underline;
+	color: @white;
+   }
+	
 
-    color: @white;
-    
+	ul.main_list {
+		float: left;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		
+		li.list {
+			display: inline-block;
+			float: left;
+			margin: 0;
+			margin-right: 50px;
+			padding: 0;
+			
+			&:last-child { margin-right: 0;
+			}
+			a#nvv
+			{
+				color: @white;
+				margin: 0;
+				margin-left: 0;
+				margin-right: 0px;
+				padding: 0;
 
-    ul.main_list
-    {
-        margin: 0;
-        padding: 0;
+				// text-decoration: none;
+				&:hover,
+				&:focus,
+				&:active
+				{
+					text-decoration: underline;
 
-        list-style-type: none;
-        li.list
-        {
-            display: inline-block;
-
-            margin: 0;
-            margin-right: 50px;
-            padding: 0;
-            &:last-child
-            {
-                margin-right: 0;
-            }
-            a#nvv
-            {
-                color: @white;
-                margin: 0;
-                margin-left: 0;
-                margin-right: 0px;
-                padding: 0;
-
-                // text-decoration: none;
-                &:hover,
-                &:focus,
-                &:active
-                {
-                    text-decoration: underline;
-
-                    color: @yellow;
-                }
-            }
-        }
-    }
-}
+					color: @yellow;
+				}
+			}
+		}
+	}
 
 // buttons Регистрация Вход
 .navigation_button
 {
-    font-size: 16px;
-    width: 200px;
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    text-align: right;
-    text-decoration: underline;
+	font-size: 16px;
+	width: 200px;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	text-align: right;
+	text-decoration: underline;
 
-    color: @white;
+	color: @white;
 }
 
 
 ul.main__enter
 {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    li    {
-        display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	li    {
+		display: inline-block;
 
-        margin: 0;
-        margin-right: 30px;
-        padding: 0;
-        &:last-child {margin-right: 0;}
-    }
-    a#nv
-    {
-        list-style: none;
-        // left: 0;
-        // padding-left: 0;
-        // margin-left: 0;
-        // display: block;
-        // text-decoration: none;
-        // margin-left: 0;
-        // padding: 0;
-        // border-bottom: 2px dashed @white;
-        // padding-bottom: 3px;
-        
+		margin: 0;
+		margin-right: 30px;
+		padding: 0;
+		&:last-child {margin-right: 0;}
+	}
+	a#nv
+	{
+		list-style: none;
+		// left: 0;
+		// padding-left: 0;
+		// margin-left: 0;
+		// display: block;
+		// text-decoration: none;
+		// margin-left: 0;
+		// padding: 0;
+		// border-bottom: 2px dashed @white;
+		// padding-bottom: 3px;
+		
 
-        color: @white;
-        &:hover,
-        &:focus,
-        &:active
-        {
-            color: @yellow;
-        }
-    }
+		color: @white;
+		&:hover,
+		&:focus,
+		&:active
+		{
+			color: @yellow;
+		}
+	}
 }

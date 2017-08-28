@@ -1,0 +1,50 @@
+extends ./templates/_template.pug
+
+
+block variables
+	- var title = 'Галерея работ'
+
+block content
+
+	include ./blocks/_header.pug
+
+			//-__________________________________________________________________________
+
+	// Портфолио
+	.container
+		.row.portfolio__row
+			.col-lg-12
+				.h1.header-1
+					a.head(href='/works--guest.html') Работы
+						span.normal которые сделал я и моя команда
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_1.png', 'Верстка Landing Page')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_2.png', 'Верстка UI набора')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_3.png', 'Верстка интернет магазина')
+
+		.row.portfolio__row
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_1.png', 'Верстка Landing Page')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_2.png', 'Верстка UI набора')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_3.png', 'Верстка интернет магазина')
+
+		.row.portfolio__row
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_1.png', 'Верстка Landing Page')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_2.png', 'Верстка UI набора')
+			.col-lg-4
+				+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_3.png', 'Верстка интернет магазина')
+	//-________________________________________________________________________________
+
+	footer
+		include ./blocks/_footer.pug
+
+
+
+
+

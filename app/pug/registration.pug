@@ -2,22 +2,36 @@ extends ./templates/_template.pug
 
 block variables
 	- var title = 'Регистрация'
+	- var url = 'login-page.html';
 
 block content
-	.login__header
-		.login-top
-		.block logo Супер Сайт
+	.login-page
+		.login-image
 
-		- var url = 'login.html';
-		a(href='/' + url) Вход
+			a#logo(href="/index.html")
+				span.logo_icon  
+				span.logo_text  Digital Lifestyle
 
+			.navigation_button
+					ul.main__enter--login
+						li
+							a(href='/' + url) Вход
+				
+			.container
+				.row
+					.check_block
+									
+						+check_in()
 
-	.login__form
-		.container
-		.row
-		.col-lg-4
-			.block Форма "Регистрация"
-			.block.button button Регистрация
+						+check_in_invalid()
 
-	include ./blocks/_login__footer.pug
+						+check_in_error_password()
 
+						+check_in_error_email()
+		
+			//- include ./blocks/_login__footer.pug
+
+			.container
+					+footer_small()
+					br
+					br

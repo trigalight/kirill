@@ -17,10 +17,22 @@ block content
 						li
 							a(href='/' + url) Регистрация
 				
+			.container
+				.row
+					.check_block
+						//-include ./blocks/_login__form.pug
+						
+						+sign_in()
 
-			include ./blocks/_login__form.pug	
-		
+						+sign_in_invalid()
+
+						+sign_in_error_email()
+
+						+sign_in_error_password()
 		
 			//- include ./blocks/_login__footer.pug
 
-			+footer_small()
+			.container
+					+footer_small()
+					br
+					br

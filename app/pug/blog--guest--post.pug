@@ -1,0 +1,81 @@
+extends ./templates/_template.pug
+
+
+block variables
+	- var title = 'Вариант блога'
+
+block content
+
+	include ./blocks/_header.pug
+	
+			//-__________________________________________________________________________
+	
+	// Блог вариант
+	.container
+		.section-all
+			.col-lg-10
+				.row
+					h1.header-1 Yosemite National Park
+
+					.row.blog_information
+						.blog-autor 
+							a.blog-autor(href='/about.html') gorlov kirill
+
+						.blog-category
+							a.blog-category(href='/blogs.html') travels
+
+						.blog-date
+							a.blog-date(href='/blogs.html') srijeda, ‎23 ‎avgust ‎2017
+
+						.blog_comments
+							a.blog_comments(href='#138') 2 comments
+					
+					img(src='./img/blog/halfdome-snow-960web.jpg').blog_photo
+				
+				
+				.row
+					p.main__text
+						| Yosemite National Park <a class="button__link" href="/blogs.html">  Сьерра-Невада</a> (/joʊˈsɛmɪti/ yoh-SEM-it-ee[5]) is a national park spanning portions of Tuolumne, Mariposa and Madera counties in Northern California.[6][7] The park, which is managed by the National Park Service, covers an area of 747,956 acres (1,168.681 sq mi; 302,687 ha; 3,026.87 km2)[2] and reaches across the western slopes of the Sierra Nevada mountain range.[8] On average, about 4 million people visit Yosemite each year,[3] and most spend the majority of their time in the 5.9 square miles (15 km2) of Yosemite Valley.[9] The park set a visitation record in 2016, surpassing 5 million visitors for the first time in its history.
+				.row
+					p.main__text
+						| Designated a World Heritage Site in <a class="button__link" href="blog.html">1984</a> , Yosemite is internationally recognized for its granite cliffs, waterfalls, clear streams, giant sequoia groves, lakes, mountains, glaciers, and biological diversity.[9] Almost 95% of the park is designated wilderness.[11] Yosemite was central to the development of the national park idea. First, Galen Clark and others lobbied to protect Yosemite Valley from development, ultimately leading to President Abraham Lincoln's signing the Yosemite Grant in 1864. Later, John Muir led a successful movement to establish a larger national park encompassing not just the valley, but surrounding mountains and forests as well—paving the way for the United States national park system.
+					p.main__text
+						|Yosemite is one of the largest and least fragmented habitat blocks in the Sierra Nevada, and the park supports a diversity of plants and animals. The park has an elevation range from 2,127 to 13,114 feet (648 to 3,997 m) and contains five major vegetation zones: chaparral/oak woodland, lower montane forest, upper montane forest, subalpine zone, and alpine. Of California's 7,000 plant species, about 50% occur in the Sierra Nevada and more than 20% within Yosemite. There is suitable habitat for more than 160 rare plants in the park, with rare local geologic formations and unique soils characterizing the restricted ranges many of these plants occupy.[9]
+
+
+				.row
+					.flex-direction-row
+							+btn_fa-arrow-left('white', 'blue', ' Назад', '#')
+
+							+btn_fa-arrow-right('white', 'blue', 'Вперед ', '#')
+					
+					.zag 2 комментария
+					
+					+comment--blog(
+						'/img/05-UI-KIT/userr_photo1.jpg', 
+						'Вася До', 
+						' 05 Мая 2017 года в 15:46', 
+						'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+
+					+comment--blog(
+						'/img/05-UI-KIT/userr_photo2.jpg', 
+						'Джоанна До', 
+						' 05 Мая 2017 года в 15:46', 
+						'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.')
+
+				.row
+					.comment_blog
+						p.comment
+							a(href='/login-page.html') Войдите
+							|  или 
+							a(href='/registration.html') зарегистрируйтесь,
+							br
+							| чтобы оставить комментарий
+
+	footer
+		include ./blocks/_footer.pug
+		
+		
+
+
+	

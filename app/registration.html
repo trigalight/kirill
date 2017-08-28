@@ -2,10 +2,9 @@
 <!-- образец-->
 <!-- блог-->
 <!-- Обычные кнопки / use in __buttons.pug-->
-<!-- Обычные кнопки со стрелками -->
+<!-- Обычные кнопки со стрелками-->
 <!-- Большое лого / header-->
 <!-- Большое навигацио  /header-->
-<!-- малое навигацио / header-->
 <!-- статусы ошибок--><!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -18,33 +17,111 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible"/><!-- FavIcons -->
     <link rel="shortcut icon" href="img/favicons/favicon-48x48.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png"/><!-- build:vendorCss css/vendor.css -->
-    <link rel="stylesheet" href="/bower/bootstrap-grid/dist/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css"/><!-- endbuild -->
+    <link rel="stylesheet" href="./bower/bootstrap-grid/dist/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="./bower/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./bower/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="./bower/open-sans-all/css/open-sans.min.css"/><!-- endbuild -->
 <!-- build:userCss css/user.css -->
-    <link rel="stylesheet" href="/css/main.css"/><!-- endbuild -->
+    <link rel="stylesheet" href="./css/main.css"/><!-- endbuild -->
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <div class="login__header">
-      <div class="login-top"></div>
-      <div class="block">logo Супер Сайт</div><a href="/login.html">Вход</a>
-    </div>
-    <div class="login__form">
-      <div class="container"></div>
-      <div class="row"></div>
-      <div class="col-lg-4">
-        <div class="block">Форма "Регистрация"</div>
-        <div class="block button">button Регистрация</div>
+    <div class="login-page">
+      <div class="login-image"><a id="logo" href="/index.html"><span class="logo_icon"> </span><span class="logo_text"> Digital Lifestyle</span></a>
+        <div class="navigation_button">
+          <ul class="main__enter--login">
+            <li><a href="/login-page.html">Вход</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="check_block">
+              <div class="figure form">
+                <div class="h1 header-1 color_white">Регистрация</div><br/><br/>
+                <input class="input" id="email" type="email" placeholder="E-mail" required="required"/><br/>
+                <input class="input form-control" id="pw" type="password" placeholder="Пароль" required="required"/>
+                <div class="row">
+                  <div class="check-remember-me">
+                    <label for="check">
+                      <input id="check" type="checkbox"/><span class="uncheck_pict">
+                        <p class="remember-me">Запомнить меня<a class="forget" href="#">Забыл пароль</a></p></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="btn btn--white-shdw"><a class="blue" href="#">Регистрация</a></div>
+              </div>
+              <div class="figure form">
+                <div class="h1 header-1 color_white">Регистрация</div><br/><br/>
+                <div class="container error">
+                  <div class="block-error-3">
+                    <div class="block-error-1">Данный email уже занят</div>
+                    <div class="block-error-3--gray">
+                      <p class="hint">Используйте другой email чтобы создать новый аккаунт.</p>
+                      <p class="hint">Или воспользуйтесь<a class="hint" href="#">восстановлением пароля</a>, чтобы войти на сайт.
+                        
+                        
+                        
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div><br/>
+                <input class="input" id="email" type="email" placeholder="E-mail" required="required"/><br/>
+                <input class="input form-control" id="pw" type="password" placeholder="Пароль" required="required"/>
+                <div class="row">
+                  <div class="check-remember-me">
+                    <label for="check">
+                      <input id="check" type="checkbox"/><span class="uncheck_pict">
+                        <p class="remember-me">Запомнить меня<a class="forget" href="#">Забыл пароль</a></p></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="btn btn--white-shdw"><a class="blue" href="#">Регистрация</a></div>
+              </div>
+              <div class="figure form">
+                <div class="h1 header-1 color_white">Регистрация</div><br/><br/>
+                <div class="block-error-1">Введите  пароль</div><br/>
+                <input class="input" id="email" type="email" placeholder="E-mail" required="required"/><br/>
+                <input class="input form-control" id="pw" type="password" placeholder="Пароль" required="required"/>
+                <div class="row">
+                  <div class="check-remember-me">
+                    <label for="check">
+                      <input id="check" type="checkbox"/><span class="uncheck_pict">
+                        <p class="remember-me">Запомнить меня<a class="forget" href="#">Забыл пароль</a></p></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="btn btn--white-shdw"><a class="blue" href="#">Регистрация</a></div>
+              </div>
+              <div class="figure form">
+                <div class="h1 header-1 color_white">Регистрация</div><br/><br/>
+                <div class="block-error-1">Введите email</div><br/>
+                <input class="input" id="email" type="email" placeholder="E-mail" required="required"/><br/>
+                <input class="input form-control" id="pw" type="password" placeholder="Пароль" required="required"/>
+                <div class="row">
+                  <div class="check-remember-me">
+                    <label for="check">
+                      <input id="check" type="checkbox"/><span class="uncheck_pict">
+                        <p class="remember-me">Запомнить меня<a class="forget" href="#">Забыл пароль</a></p></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="btn btn--white-shdw"><a class="blue" href="#">Регистрация</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="login__footer1">
+            <p class="text">© горлов кирилл<br/>Создано с<span class="logo_icon--heart"> + </span><span></span>  в<a class="logo_text--footer" href="http://webcademy.ru"><span class="logo_text--footer"> WebCademy.ru</span></a></p>
+            <p class="text">в 2017 году</p>
+          </div><br/><br/>
+        </div>
       </div>
-    </div>
-    <div class="login__footer1">
-      <p class="text">© Юрий Ключевский<br/>Создано с <span class="logo_icon--heart"></span>   в <span class="logo_text--footer">WebCademy.ru </span>     в 2017 году</p>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script><!-- build:vendorJs js/vendor.js -->
-    <script src="/bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
+    </div><!-- build:vendorJs js/vendor.js -->
+    <script src="./bower/jquery/dist/jquery.min.js" defer="defer"></script><!-- endbuild -->
 <!-- build:userJs js/user.js -->
-    <script src="/js/main.js" defer="defer"></script><!-- endbuild -->
+    <script src="./js/main.js" defer="defer"></script><!-- endbuild -->
   </body>
 </html>

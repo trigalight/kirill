@@ -1,13 +1,5 @@
-figure.form
-	//-.login__form--inner 
-	//- form.form__card-login(method = "POST",action = "#") сука 
-	figcaption.h1.header-1 Вход на сайт
+//-registration()
 
-
-	br
-	+block-error-1()
-	br
-	
 	//- .error__header Неверный email или пароль
 	//- .error__body 
 		p Введите верные данные для входа или воспользуйтесь.
@@ -17,12 +9,7 @@ figure.form
 
 
 		
-	.form-group
-		input#email.form-control(type='email', placeholder='name@email.com' required)
-	br
-	.form-group
-		//-label(for='pw') Password:
-		input#pw.form-control(type='password' placeholder='password' required)
+	
 
 			//- .form-group
 			//- 	label(for='pw2') Confirm Password:
@@ -34,11 +21,30 @@ figure.form
 	
 	//- a.header-6(href="#") Забыл пароль
 
-	+check-remember-me()
-
-
-	+btn('white-shdw', 'blue', 'Войти', '#')
+	
 
 	//- // register form
 			form(method='POST' action='#')
+
+
+	//- .row
+	//- 	
+	//- 	br
+	//- 	br
+	//- 	+block-error-2()
+				
+	//- .row
+	//- 	br
+	//- 	.line
+		
+	//- 	+block-error-3()
+
+	//- 	+block-error-4() 
+
+	//- br
+	//- +block-error-1()
+	//- br
+
+	//Регистрация
+	///registration.htm
 

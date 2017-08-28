@@ -1,53 +1,61 @@
 .container
-		.row
-			//- Фотография ПОЛЬЗОВАТЕЛЯ
-			.col-lg-3
-				+userphoto ()
+	.row
+		//- Фотография ПОЛЬЗОВАТЕЛЯ
+		.col-lg-3
+			+userphoto ()
 
-			//- Резюме
-			.col-lg-9
-				h1.header-tit Горлов Кирилл 
-				
-				p.main_text
-					|Я веб разработчик из черногории. Мне 49+ лет. 
-					<br/>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-					<br/>
-					|Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
-					<br/>Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-								
-				h2.header-subtitle Что я умею
+		//- Резюме
+		.col-lg-9
+			h1.header-tit Горлов Кирилл
 
-				p.main_text.
-					Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
-					<br/>
-					Также знаком и могу решать несложные задачи на Backend.
-					<br/>
-					Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+			p.main_text
+				|Я веб разработчик из черногории. Мне 49+ лет.
+				<br/>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+			p.main_text
+				|Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+				<br/>Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-				
-				+btn('white', 'blue', 'Подробнее', '#')
+			h2.header-subtitle Что я умею
 
-			//- конец резюме
+			p.main_text.
+				Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
+				<br/>
+				Также знаком и могу решать несложные задачи на Backend.
+			p.main_text.
+				Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+			br
+
+			.row
+				.col-lg-3
+					+btn('white', 'blue', 'Подробнее', '/about--guest.html')
+
+				//- конец резюме
+
+
+.line#main
 
 // Портфолио
 .container
-	.block Новые работы
-	.row
+	.h1.header-1
+		a.head(href='/works--guest.html') Новые работы
+	.row.portfolio__row
 		.col-lg-4
-			.block Работа 1
+			+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_1.png', 'Верстка Landing Page')
 		.col-lg-4
-			.block Работа 2
+			+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_2.png', 'Верстка UI набора')
 		.col-lg-4
-			.block Работа 3
+			+portfolio-card('/img/01_main/Portfloio_Thumb_Preview_3.png', 'Верстка интернет магазина')
 
-	.block Новые записи в блоге
+	.h1.header-1
+		a.head(href='/blogs--guest.html') Новые записи в блоге
 	.row
 		.col-lg-4
-			.block Post Card 1
+			+portfolio-card--post('/img/01_main/Post_Thumb_Preview_1.png', 'Поездка в New York ')
 		.col-lg-4
-			.block Post Card 2
+			+portfolio-card--post('/img/01_main/Post_Thumb_Preview_2.png', 'Что я делал в долине')
 		.col-lg-4
-			.block Post Card 3
+			+portfolio-card--post('/img/01_main/Post_Thumb_Preview_3.png', 'Как я ходил в поход этим летом')
+
 
 
 

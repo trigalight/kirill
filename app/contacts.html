@@ -9,7 +9,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Обо мне</title>
+    <title>Контакты</title>
     <meta content="" name="trigalight"/>
     <meta content="" name="Gulp сборка для ДЗ"/>
     <meta content="" name="Ключевые слова..."/>
@@ -50,83 +50,64 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
-          <div class="user-photo user-photo--shadow"><img src="./img/04-UI-KIT/P_20170326_100045_BF.jpg" alt="user-photo"/></div>
-        </div>
-        <div class="col-lg-9">
-          <h1 class="header-tit">Горлов Кирилл</h1>
-          <p class="main_text">
-            Я веб разработчик из черногории. Мне 49+ лет.<br/>Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
-          <p class="main_text">
-            Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.<br/>Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
-          <h2 class="header-subtitle">Что я умею</h2>
-          <p class="main_text">
-            Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
-            <br/>
-            Также знаком и могу решать несложные задачи на Backend.
-          </p>
-          <p class="main_text">Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p><br/>
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="btn btn--white"><a class="blue" href="/about--guest.html">Подробнее</a></div>
+        <div class="col-lg-10">
+          <div class="col-lg-5">
+            <table class="contact_table">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="header-1">Контакты</div>
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="header-6" width="170px">E-mail</td>
+                  <td><a class="button__link" href="#">enotaero@gmail.com</a></td>
+                </tr>
+                <tr>
+                  <td class="header-6">Skype</td>
+                  <td><a class="button__link" href="#">enotaero</a></td>
+                </tr>
+                <tr>
+                  <td class="header-6">Социальные сети</td>
+                  <td class="header-6" color="@blue"><a class="button__link" href="#">Профиль Вконтакте</a><br/><a class="button__link" href="#">Профиль Facebook</a><br/><br/></td>
+                </tr>
+                <tr>
+                  <td class="header-6">Телефон</td>
+                  <td>+382 68 624 110</td>
+                </tr>
+                <tr>
+                  <td class="header-6">Адрес</td>
+                  <td>Igalo, Herceg Novi, Montenegro, 85347</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-1"></div>
+          <!-- .col-lg-1-->
+          <div class="col-lg-5">
+            <div class="flex_d_c flex_s_b" id="col2">
+              <div class="header-1">Связаться со мной</div><br/>
+              <input class="input" type="text" name="name" placeholder="Введите имя"/>
+              <input class="input" type="text" name="name" placeholder="Email"/>
+              <textarea class="input" type="text" placeholder="Сообщение"></textarea>
+              <div class="header-6">Прикрепить файл</div>
+              <p class="main__text">jpg, png, pdf, doc, весом до 2 Мб</p>
+              <div class="flex_d_r flex_s_b flex_v_c">
+                <div class="btn btn--white"><a class="blue" href="#">Выбрать файл</a></div>
+                <p class="main__text" color="grey">my-lovely-photo.jpg</p>
+              </div>
+              <div class="flex_container"><br/>
+                <div class="btn btn--blue"><a class="white" href="#">Отправить</a></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="line" id="main"></div>
-    <!-- Портфолио-->
-    <div class="container">
-      <div class="h1 header-1"><a class="head" href="/works--guest.html">Новые работы</a></div>
-      <div class="row portfolio__row">
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image" src="/img/01_main/Portfloio_Thumb_Preview_1.png"></image>
-            <h4 class="portfolio__title">Верстка Landing Page</h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="work--guest--post.html">Смотреть кейс</a></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image" src="/img/01_main/Portfloio_Thumb_Preview_2.png"></image>
-            <h4 class="portfolio__title">Верстка UI набора</h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="work--guest--post.html">Смотреть кейс</a></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image" src="/img/01_main/Portfloio_Thumb_Preview_3.png"></image>
-            <h4 class="portfolio__title">Верстка интернет магазина</h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="work--guest--post.html">Смотреть кейс</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="h1 header-1"><a class="head" href="/blogs--guest.html">Новые записи в блоге</a></div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image--post" src="/img/01_main/Post_Thumb_Preview_1.png"></image>
-            <h4 class="portfolio__title">Поездка в New York </h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="/blog--guest--post.html">Читать</a></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image--post" src="/img/01_main/Post_Thumb_Preview_2.png"></image>
-            <h4 class="portfolio__title">Что я делал в долине</h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="/blog--guest--post.html">Читать</a></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="portfolio__card">
-            <image class="portfolio_image--post" src="/img/01_main/Post_Thumb_Preview_3.png"></image>
-            <h4 class="portfolio__title">Как я ходил в поход этим летом</h4>
-            <div class="btn btn--white" id="portfolio"><a class="blue" href="/blog--guest--post.html">Читать</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row_h80"></div>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.3580613548193!2d18.506923366481388!3d42.462672787913704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDI3JzQ1LjYiTiAxOMKwMzAnMzAuNSJF!5e0!3m2!1sru!2sru!4v1503751770485" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     <footer>
       <div class="footer">
         <div class="block-footer">

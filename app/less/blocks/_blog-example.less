@@ -1,0 +1,113 @@
+.section-all {
+	padding: 66px 0;
+	margin: 0;
+}
+
+
+.blog_information {
+	width: 100%;
+	margin: 0;
+	padding: 15px 0;
+	text-align: left;
+	}
+
+.blog-autor, .blog-category, .blog-date, .blog_comments {
+	font-size: 14px;   //5px;
+	font-weight: 600;
+	margin-right: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	// float: left;
+
+		&.blog-autor {color: @black;}
+		&.blog-category {color: @blue;}
+		&.blog-date, .fa-clock-o {color: @grey;}
+		&.blog_comments {color: @blue;}
+
+		&:hover {color: @grey;}
+	}
+.fa.fa-clock-o {
+	color: @grey
+	}
+
+.blog_photo{
+	margin-bottom: 33px;
+	width: 100%;
+
+	@media (min-width: 768px){
+		margin-bottom: 40px;
+		margin-top: 15px;
+	}
+	@media (min-width: 992px){
+		margin-bottom: 40px;
+		margin-top: 15px;
+	}
+	@media (min-width: 1200px){}
+}
+
+
+.zag {
+	margin: 0;
+	padding: 0;
+	margin: 35px 0 10px 0;
+	font-size: 26px;
+	font-weight: 600;
+}
+
+
+
+
+.comment_blog {
+	display: flex;
+	display: inline-flex;
+	border-radius: 6px;
+	margin: 10px 0;
+	padding: 15px;
+	background-color: @grey_light;
+	width: 100%;
+}
+
+.object  {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	// background-color: yellow;
+}
+div .user-photo.small-avatar {
+	// background-color: red;
+	margin-right: 25px;
+	//flex-basis: 400px;
+	//margin-bottom: 50px;
+	align-self: stretch;
+	flex-flow: column wrap;
+	}
+
+div .header-6.h6 {
+	// background: plum;
+	margin-right: 25px;
+	// font-weight: 800;
+	}
+
+
+
+.object div:nth-child(2) {
+	margin: 0;
+	flex-basis: 80%;
+	}
+
+.object div:nth-child(3) {
+	//background-color: green;
+	margin-top: 5px;
+	}
+
+p.comment {
+	font-size: 20px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 1.7;
+	width: auto;
+	align-content: center;
+	margin: 0 auto 0 auto;
+	}
+

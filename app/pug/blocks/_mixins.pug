@@ -1,6 +1,6 @@
 // образец
 mixin button(text, link)
-	a(href= link).button 
+	a(href= link).button
 		= text
 //---------------------------------------------------------------------------------
 
@@ -10,7 +10,7 @@ mixin blog-post-preview(title, img)
 		img(src= img).blog-post-preview__img
 		h4.blog-post-preview__title
 			= title
-		a(href= link).blog-post-preview__link 
+		a(href= link).blog-post-preview__link
 			| Читать
 
 //---------------------------------------------------------------------------------
@@ -18,13 +18,13 @@ mixin blog-post-preview(title, img)
 // Обычные кнопки / use in __buttons.pug
 mixin btn(color_fon, color_txt, title, link)
 	.btn(class=`btn--${color_fon}`)&attributes(attributes)
-		a(class= color_txt href= link)  
+		a(class= color_txt href= link)
 			= title
 
 
-// Обычные кнопки со стрелками 
+// Обычные кнопки со стрелками
 //- mixin btn_fa-arrow-left(link)
-//- 	a(href= link).button 
+//- 	a(href= link).button
 //- 		i.fa.fa-arrow-left(aria-hidden='true')
 //- 		| Назад
 
@@ -37,7 +37,7 @@ mixin btn_fa-arrow-left(color_fon, color_txt, title, link)
 mixin btn_fa-arrow-right(color_fon, color_txt, title, link)
 	.btn(class=`btn--${color_fon}`)&attributes(attributes)
 		a(class= color_txt href= link)
-			= title 
+			= title
 			i.fa.fa-arrow-right(aria-hidden='true')
 
 
@@ -48,8 +48,8 @@ mixin btn_fa-arrow-right(color_fon, color_txt, title, link)
 mixin logo_big()
 	a#logo(href="/index.html")
 		span.logo_icon  
-		span.logo_text  Digital Lifestyle 
-	.logo_slogan Сайт IT специалиста 
+		span.logo_text  Digital Lifestyle
+	.logo_slogan Сайт IT специалиста
 
 // Большое навигацио  /header
 mixin navigation_main()
@@ -58,16 +58,19 @@ mixin navigation_main()
 			li.list
 				a#nvv(href='/index.html') Главная
 			li.list
-				a#nvv(href='#') Обо мне
+				a#nvv(href='/about--guest.html') Обо мне
 			li.list
-				a#nvv(href='/review.html') Работы
+				a#nvv(href="/works--guest.html") Работы
 			li.list
-				a#nvv(href='/blog.html') Блог
+				a#nvv(href="/blog--guest--post.html") Блог
 			li.list
-				a#nvv(href='#') Контакты
+				a#nvv(href='/contacts.html') Контакты
 			li.list
-				a#nvv(href='/UI-KIT-%D0%91%D0%9B%D0%9E%D0%9A%D0%98.html') UI KIT - БЛОКИ	
-// малое навигацио / header
+				a#nvv(href='/UI-KIT-%D0%91%D0%9B%D0%9E%D0%9A%D0%98.html') UI KIT - БЛОКИ
+
+
+
+//- малое навигацио / header
 mixin navigation_small()
 	.navigation_button
 		ul.main__enter
@@ -81,8 +84,7 @@ mixin navigation_small()
 //-----------------------------------------------------------------------------------
 
 mixin bage ()
-	.bage Пользователь 	
-
+	.bage Пользователь
 
 //---------------------------------------------------------------------------------
 
@@ -90,13 +92,13 @@ mixin bage ()
 
 mixin userphoto ()
 	.user-photo.user-photo--shadow
-		img(src="/img/04-UI-KIT/P_20170326_100045_BF.jpg" alt="user-photo")
+		img(src='./img/04-UI-KIT/P_20170326_100045_BF.jpg' alt="user-photo")
 
 
 //- csmall avatar
-mixin small_avatar()
+mixin small_avatar(user_photo__link)
 	.user-photo.small-avatar
-		img(src="./img/04-UI-KIT/avatar_small.jpg" alt="")
+		img(src= user_photo__link alt="")
 
 //---------------------------------------------------------------------------------
 // статусы ошибок
@@ -104,35 +106,213 @@ mixin small_avatar()
 mixin block-error-1()
 	.block-error-1 Введите email
 
+mixin block-error-11()
+	.block-error-1 Введите  пароль
+
+
+
 mixin block-error-2()
 	.block-error-2 Комментарий не может быть пустым.
 
+
+
 mixin block-error-3()
 	.container.error
-		.block-error-3 
+		.block-error-3
 			.block-error-1 Данный email уже занят
 			.block-error-3--gray
 				p.hint Используйте другой email чтобы создать новый аккаунт.
-				p.hint Или воспользуйтесь 
-					a(href="#") восстановлением пароля
-					.
-						, чтобы войти на сайт.
-mixin block-error-4()
-	.container.error
-		.block-error-3 
-			.block-error-1 Неверный email или пароль
-			.block-error-3--gray2 
-				p.hint Введите верные данные для входа или воспользуйтесь 
+				p.hint Или воспользуйтесь
 					a.hint(href="#") восстановлением пароля
 					.
 						, чтобы войти на сайт.
+
+
+
+
+mixin block-error-4()
+	.container.error
+		.block-error-3
+			.block-error-1 Неверный email или пароль
+			.block-error-3--gray2
+				p.hint Введите верные данные для входа или воспользуйтесь
+					a.hint(href="#") восстановлением пароля
+					.
+						, чтобы войти на сайт.
+
+
+//-================================================================
+//- without errors
+
+mixin sign_in()
+	.figure.form
+		.h1.header-1.color_white Вход на сайт
+		br
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Войти', '#')
+
+
+//-  Регистрация
+mixin check_in()
+	.figure.form
+		.h1.header-1.color_white Регистрация
+		br
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Регистрация', '#')
+
+
+
+//-================================================================
+//- Invalid email or password
+
+mixin sign_in_invalid()
+	.figure.form
+		.h1.header-1.color_white Вход на сайт
+		br
+		br
+		+block-error-4()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Войти', '#')
+
+
+//-  Регистрация
+mixin check_in_invalid()
+	.figure.form
+		.h1.header-1.color_white Регистрация
+		br
+		br
+		+block-error-3()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Регистрация', '#')
+//-================================================================
+//- without errors
+
+mixin sign_in_error_password()
+	.figure.form
+		.h1.header-1.color_white Вход на сайт
+		br
+		br
+		+block-error-11()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Войти', '#')
+
+
+//-  Регистрация
+mixin check_in_error_password()
+	.figure.form
+		.h1.header-1.color_white Регистрация
+		br
+		br
+		+block-error-11()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Регистрация', '#')
+
+//-================================================================
+
+mixin sign_in_error_email()
+	.figure.form
+		.h1.header-1.color_white Вход на сайт
+		br
+		br
+		+block-error-1()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Войти', '#')
+
+
+
+//-  Регистрация
+mixin check_in_error_email()
+	.figure.form
+		.h1.header-1.color_white Регистрация
+		br
+		br
+		+block-error-1()
+		br
+		input.input#email(type='email', placeholder='E-mail' required)
+		br
+
+		input.input#pw.form-control(type='password' placeholder='Пароль' required)
+
+		.row
+			+check-remember-me()
+
+		+btn('white-shdw', 'blue', 'Регистрация', '#')
+
+
+
+//-================================================================
+
+
+
+
+
+
+
+
+
 
 
 //-------------------------------------------------------------------------------------------------------
 
 mixin check-remember-me()
 	.check-remember-me
-		label(for='check') 
+		label(for='check')
 			input(id='check' type='checkbox')
 			span.uncheck_pict
 				p.remember-me Запомнить меня
@@ -144,14 +324,59 @@ mixin check-remember-me()
 
 mixin footer_small()
 	.login__footer1
-		p.text © горлов кирилл<br/>Создано с 
+		p.text © горлов кирилл<br/>Создано с
 			span.logo_icon--heart  + 
-			|    в 
+			span
+			|   в
 			a.logo_text--footer(href='http://webcademy.ru')
-				span.logo_text--footer WebCademy.ru
-			|      в 2017 году
+				span.logo_text--footer  WebCademy.ru
+		p.text в 2017 году
 
-//- <i class="fa fa-medkit" aria-hidden="true"></i>	
+//- <i class="fa fa-medkit" aria-hidden="true"></i>
+
+
+//-==================================================================
+//-Карточки превью
+
+mixin portfolio-card(image, name)
+	.portfolio__card
+		image(src= image).portfolio_image
+		h4.portfolio__title= name
+		+btn('white', 'blue', 'Смотреть кейс', 'work--guest--post.html')#portfolio
+
+mixin portfolio-card--post(image, name)
+	.portfolio__card
+		image(src= image).portfolio_image--post
+		h4.portfolio__title= name
+		+btn('white', 'blue', 'Читать', '/blog--guest--post.html')#portfolio
+
+
+//-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//- блок комментариев блоке
+
+mixin comment--blog(user_photo__link, user_name, date, text_cmnt)
+	.comment_blog
+		div
+			+small_avatar(user_photo__link)
+
+		.object
+			.div
+				.header-6.h6= user_name
+			.div
+				.fa.fa-clock-o(aria-hidden="true")
+				.blog-date= date
+			.div
+				.p.main__text= text_cmnt
 
 
 
+//-***************************************************************************
+
+//- INPUT * texеarea  in comments
+
+mixin input(input_type, input_name, placeholder)
+	input(type= input_type, name= input_name, placeholder= placeholder,
+		).input
+
+mixin textarea(textarea_type, textarea_hame, placeholder)
+	textarea(type= textarea_type, name= textarea_name, placeholder= placeholder).input

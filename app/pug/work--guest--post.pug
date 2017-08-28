@@ -1,0 +1,110 @@
+extends ./templates/_template.pug
+
+
+block variables
+	- var title = 'Вариант работы'
+
+block content
+
+	include ./blocks/_header.pug
+
+			//-__________________________________________________________________________
+
+	// Блог вариант
+	.container
+		.section-all
+			.col-lg-10
+				.row
+					h1.header-1 Верстка и frontend Интернет магазина
+
+					.row.blog_information
+						.blog-autor
+							a.blog-autor(href='/about.html') gorlov kirill
+
+						.blog-category
+							a.blog-category(href='/blogs.html') works
+
+						.blog-date
+							a.blog-date(href='/blogs.html') srijeda, ‎26 ‎avgust ‎2017
+
+					img(src='./img/works/image_for_work.jpg').blog_photo
+				.row
+					.col-lg-5
+
+						.header-3(style={margin: '0 0 15px 0'}) Кратко о проекте
+
+						p.main__text
+							| Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+							br
+						.header-6(style={margin: '0 0 15px 0'})
+							| Время работы над проектом: 6 недель
+						.header-6(style={margin: '0 0 15px 0'})
+							| Страниц сверстано: 52 страницы
+						.header-6(style={margin: '0 0 15px 0'})
+							| Бюджет проекта: до 60 000 рублей
+							br
+						.header-3(style={margin: '0 0 15px 0'})
+							| Результат
+						p.main__text
+							| Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+
+					.col-lg-1
+					.col-lg-5
+
+						.header-3(style={margin: '0 0 15px 0'}) 	Технологии
+
+						p.main__text--list-line
+							|• HTML5, CSS3.
+							br
+							| • JavaScript, jQuery.
+							br
+							| • LESS, PUG, Gulp, npm, bower.
+
+						.header-3(style={margin: '0 0 15px 0'}) 	Ссылка на проект
+
+						.button__link
+							a.button__link(href='https://colorscheme.ru/html-colors.html') https://colorscheme.ru
+
+						br
+
+						.header-3(style={margin: '0 0 15px 0'}) 	Ссылка на GitHub
+						a.button__link(href='https://github.com/pozitive/magnumstore/') https://github.com/pozitive/magnumstore/
+
+				.row
+					.flex_d_r.flex_s_b
+							+btn_fa-arrow-left('white', 'blue', ' Все работы', '#')
+
+							+btn_fa-arrow-right('white', 'blue', 'Следующая работа ', '#')
+
+	.row_h80
+
+				//- 	.zag 2 комментария
+
+				//- 	+comment--blog(
+				//- 		'/img/05-UI-KIT/userr_photo1.jpg',
+				//- 		'Вася До',
+				//- 		' 05 Мая 2017 года в 15:46',
+				//- 		'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.')
+
+				//- 	+comment--blog(
+				//- 		'/img/05-UI-KIT/userr_photo2.jpg',
+				//- 		'Джоанна До',
+				//- 		' 05 Мая 2017 года в 15:46',
+				//- 		'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.')
+
+				//- .row
+				//- 	.comment_blog
+				//- 		p.comment
+				//- 			a(href='/login-page.html') Войдите
+				//- 			|  или
+				//- 			a(href='/registration.html') зарегистрируйтесь,
+				//- 			br
+				//- 			| чтобы оставить комментарий
+
+	footer
+		include ./blocks/_footer.pug
+
+
+
+
+

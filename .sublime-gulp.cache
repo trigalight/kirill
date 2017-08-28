@@ -1,0 +1,1 @@
+{"D:\\Web Storage\\YandexDisk\\Projects\\Personal site\\kirill-master\\gulpfile.js":{"sha1":"89554fbd960ca39b3bb3b55048cfa1a9ea6e6382","tasks":{"server":{"name":"server","dependencies":""},"less":{"name":"less","dependencies":""},"pug":{"name":"pug","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":""}}}}
